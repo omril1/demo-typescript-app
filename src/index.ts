@@ -1,3 +1,6 @@
+// https://devblogs.microsoft.com/typescript/announcing-typescript-5-6/#iterator-helper-methods
+// https://github.com/tc39/proposal-iterator-helpers
+
 function* getIterator() {
     yield { thing: { number: 1, someFlag: false } };
     yield { thing: { number: 2, someFlag: true } };
