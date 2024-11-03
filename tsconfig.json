@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "ES2023",
+        "module": "ESNext",
+        "lib": ["ESNext"],
+
+        "rootDir": "src",
+        "outDir": "lib",
+        "strict": true,
+        "pretty": true,
+		"skipLibCheck": true
+    },
+    "include": ["typings/**/*", "src/**/*"]
+}

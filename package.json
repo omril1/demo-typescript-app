@@ -1,0 +1,19 @@
+{
+  "name": "demo-typescript-app",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "author": {
+    "name": "Omri Luzon",
+    "email": "omril@testim.io"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "5.6.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --import tsx --test src/index.test.ts"
+    
+  }
+}
