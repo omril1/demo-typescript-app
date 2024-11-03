@@ -12,13 +12,28 @@ function* getIterator() {
 export function countThingsWithFlagUsingArrayMethods() {
     return Array.from(getIterator())
         .map(({ thing }) => thing)
-        .filter(thing => !thing.someFlag)
-        .length;
+        .filter((thing) => !thing.someFlag).length;
 }
 
 export function countThingsWithFlagUsingIteratorHelpers() {
-    return Iterator.from(getIterator())
+    return getIterator()
         .map(({ thing }) => thing)
-        .filter(thing => !thing.someFlag)
-        .reduce(count => count + 1, 0);
+        .filter((thing) => !thing.someFlag)
+        .reduce((count) => count + 1, 0);
+}
+
+export function dropFirstUsingArrayMethods() {
+    return Array.from(getIterator()).slice(1);
+}
+
+export function dropFirstUsingIteratorHelpers() {
+    return getIterator().drop(1).toArray();
+}
+
+export function dropAndTakeUsingArrayMethods() {
+    return Array.from(getIterator()).slice(1, 3);
+}
+
+export function dropAndTakeUsingIteratorHelpers() {
+    return getIterator().drop(1).take(2).toArray();
 }
